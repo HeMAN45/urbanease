@@ -14,18 +14,14 @@
     }
   ],
   "routes": [
-    // 1. New Rule: Explicitly serve index.html for the root path
     {
       "src": "/",
       "dest": "/dist/index.html"
     },
-    // 2. Existing Rule: Route all API calls to the serverless function
     {
       "src": "/api/(.*)",
       "dest": "server/index.ts"
     },
-    // 3. Updated Rule: Route all other client-side paths to index.html 
-    // This is crucial for client-side routing (React Router) to work.
     {
       "src": "/(.*)",
       "dest": "/dist/index.html"
