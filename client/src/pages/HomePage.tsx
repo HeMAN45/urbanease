@@ -14,18 +14,18 @@ import acTechImage from "@assets/generated_images/AC_technician_professional_hea
 import pestControlImage from "@assets/generated_images/Pest_control_specialist_headshot_90620d47.png";
 
 const CATEGORIES = [
-  { id: 'electrician', icon: Zap, title: 'Electrician' },
-  { id: 'plumber', icon: Droplet, title: 'Plumbing' },
-  { id: 'carpenter', icon: Hammer, title: 'Carpenter' },
-  { id: 'painter', icon: Paintbrush, title: 'Painting' },
-  { id: 'cleaning', icon: Sparkles, title: 'House Cleaning' },
-  { id: 'ac', icon: Wind, title: 'AC Repair' },
-  { id: 'appliance', icon: Wrench, title: 'Appliance Repair' },
-  { id: 'pest', icon: Bug, title: 'Pest Control' },
-  { id: 'salon', icon: Scissors, title: 'Home Salon' },
-  { id: 'gardening', icon: TreePine, title: 'Gardening' },
-  { id: 'security', icon: Shield, title: 'Home Security' },
-  { id: 'pooja', icon: Flower2, title: 'Pooja/Pandit' },
+  { id: 'Electrician', icon: Zap, title: 'Electrician' },
+  { id: 'Plumbing', icon: Droplet, title: 'Plumbing' },
+  { id: 'Carpenter', icon: Hammer, title: 'Carpenter' },
+  { id: 'Painting', icon: Paintbrush, title: 'Painting' },
+  { id: 'House Cleaning', icon: Sparkles, title: 'House Cleaning' },
+  { id: 'AC Repair', icon: Wind, title: 'AC Repair' },
+  { id: 'Appliance Repair', icon: Wrench, title: 'Appliance Repair' },
+  { id: 'Pest Control', icon: Bug, title: 'Pest Control' },
+  { id: 'Home Salon', icon: Scissors, title: 'Home Salon' },
+  { id: 'Gardening', icon: TreePine, title: 'Gardening' },
+  { id: 'Home Security', icon: Shield, title: 'Home Security' },
+  { id: 'Pooja/Pandit', icon: Flower2, title: 'Pooja/Pandit' },
 ];
 
 const MOCK_PROFESSIONALS: Professional[] = [
@@ -115,13 +115,13 @@ const MOCK_PROFESSIONALS: Professional[] = [
 ];
 
 export default function HomePage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('electrician');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Electrician');
   const [selectedProfessional, setSelectedProfessional] = useState<Professional | null>(null);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const { toast } = useToast();
   
   const filteredProfessionals = MOCK_PROFESSIONALS.filter(
-    (prof) => prof.category.toLowerCase().includes(selectedCategory.toLowerCase())
+    (prof) => prof.category === selectedCategory
   );
   
   const handleBooking = (professional: Professional) => {
