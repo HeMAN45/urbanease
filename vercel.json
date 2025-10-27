@@ -14,14 +14,24 @@
     }
   ],
   "routes": [
+    // 1. **NEW:** Explicitly route ALL files in the 'dist/assets' folder
+    //    This ensures your bundled JS, CSS, and images are served correctly.
+    {
+      "src": "/assets/(.*)",
+      "dest": "/dist/assets/$1"
+    },
+    // 2. Existing Rule: Route all API calls to the serverless function
+    {
+      "src": "/api/(.*)",
+      "dest": "server/index.ts" 
+    },
+    // 3. Updated Rule: Route root path (/) to index.html
     {
       "src": "/",
       "dest": "/dist/index.html"
     },
-    {
-      "src": "/api/(.*)",
-      "dest": "server/index.ts"
-    },
+    // 4. Updated Rule: Catch-all for all other client-side routes (e.g., /about) 
+    //    Crucial for client-side routing to load index.html first.
     {
       "src": "/(.*)",
       "dest": "/dist/index.html"
