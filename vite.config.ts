@@ -3,7 +3,12 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
-export default defineConfig({
+const ROOT_DIR = path.resolve(import.meta.dirname);
+const CLIENT_SRC_DIR = path.resolve(ROOT_DIR, "client");
+
+export default defineConfig(async () => ({
+  base: "/",
+
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -21,17 +26,16 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      "@": path.resolve(CLIENT_SRC_DIR, "src"),
+      "@shared": path.resolve(ROOT_DIR, "shared"),
+      "@assets": path.resolve(ROOT_DIR, "attached_assets"),
     },
   },
-  root: path.resolve(import.meta.dirname, "client"),
-    build: {
-      // Change this line:
-      outDir: "dist", 
-      // This tells Vite to output files to 'client/dist'
-      emptyOutDir: true,
+  root: CLIENT_SRC_DIR,
+
+  build: {
+    outDir: path.resolve(ROOT_DIR, "dist"),
+    emptyOutDir: true,
   },
   server: {
     fs: {
@@ -39,4 +43,5 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));
+
