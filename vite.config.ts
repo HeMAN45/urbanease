@@ -27,9 +27,11 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
-  build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
-    emptyOutDir: true,
+    build: {
+      // Change this line:
+      outDir: "dist", 
+      // This tells Vite to output files to 'client/dist'
+      emptyOutDir: true,
   },
   server: {
     fs: {
