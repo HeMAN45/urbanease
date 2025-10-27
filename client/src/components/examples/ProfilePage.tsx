@@ -4,7 +4,7 @@ export default function ProfilePageExample() {
   return (
     <ProfilePage
       userName="Neha Singh"
-      currentLocation="Dadar, Mumbai, 400028"
+      currentLocation="Akurdi, Pune, 411035"
       onLocationUpdate={(newLocation) => console.log('Location updated to:', newLocation)}
     />
   );

@@ -1,4 +1,4 @@
-import { MapPin, Heart, User, Menu } from "lucide-react";
+import { MapPin, Heart, User, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface HeaderProps {
@@ -44,10 +44,11 @@ export default function Header({ location, onLocationChange, onNavigate, current
             size="icon"
             variant="ghost"
             onClick={() => onNavigate('chat')}
-            className="text-primary-foreground hover:text-primary-foreground"
+            className="text-primary-foreground hover:text-primary-foreground relative"
             data-testid="button-chat"
           >
-            <Menu className="w-5 h-5" />
+            <MessageSquare className="w-5 h-5" />
+            <span className="absolute -top-1 -right-1 w-2 h-2 bg-destructive rounded-full" />
           </Button>
           <Button
             size="icon"

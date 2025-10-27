@@ -6,7 +6,7 @@ export default function HeaderExample() {
   
   return (
     <Header
-      location="Dadar, Mumbai, 400028"
+      location="Akurdi, Pune, 411035"
       onLocationChange={() => console.log('Change location clicked')}
       onNavigate={(newPage) => {
         console.log('Navigate to:', newPage);

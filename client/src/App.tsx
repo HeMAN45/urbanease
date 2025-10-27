@@ -38,7 +38,7 @@ function Router({ currentPage, onNavigate, location, onLocationChange }: {
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [location, setLocation] = useState("Dadar, Mumbai, 400028");
+  const [location, setLocation] = useState("Akurdi, Pune, 411035");
   
   const handleNavigate = (page: string) => {
     setCurrentPage(page);
