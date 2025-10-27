@@ -18,67 +18,23 @@ Urbanease is a full-stack, modern web application designed to connect users with
 
 Frontend (Client)
 
-Category
+Framework: React (The core JavaScript library for building the user interface.)
 
-Technology
+Tooling: Vite (Next-generation frontend tooling for fast development and bundling.)
 
-Purpose
+Styling: Tailwind CSS & Shadcn UI (Utility-first CSS framework and beautiful component library for design.)
 
-Framework
-
-React
-
-The core JavaScript library for building the user interface.
-
-Tooling
-
-Vite
-
-Next-generation frontend tooling for fast development and bundling.
-
-Styling
-
-Tailwind CSS & Shadcn UI
-
-Utility-first CSS framework and beautiful component library for design.
-
-Language
-
-TypeScript
-
-Ensures type safety across the entire application.
+Language: TypeScript (Ensures type safety across the entire application.)
 
 Backend (Server)
 
-Category
+Framework: Express.js (Fast, unopinionated, minimalist web framework for Node.js.)
 
-Technology
+Language: TypeScript (Provides server-side type checking and stability.)
 
-Purpose
+Database ORM: Drizzle ORM (Modern, head-less TypeScript ORM for interacting with the database.)
 
-Framework
-
-Express.js
-
-Fast, unopinionated, minimalist web framework for Node.js.
-
-Language
-
-TypeScript
-
-Provides server-side type checking and stability.
-
-Database ORM
-
-Drizzle ORM
-
-Modern, head-less TypeScript ORM for interacting with the database.
-
-Tooling
-
-Esbuild
-
-Used for bundling the serverless function for deployment.
+Tooling: Esbuild (Used for bundling the serverless function for deployment.)
 
 💻 Getting Started
 
@@ -100,9 +56,11 @@ git clone [https://github.com/HeMAN45/urbanease.git](https://github.com/HeMAN45/
 cd urbanease
 
 
+
 Install dependencies in the root:
 
 npm install
+
 
 
 Environment Variables:
@@ -114,10 +72,12 @@ DATABASE_URL="postgresql://user:password@host:port/database"
 # VITE_PUBLIC_API_URL="http://localhost:3000/api" 
 
 
+
 Run the Build Script:
 This script builds both the client (Vite) and the server (Esbuild).
 
 npm run build
+
 
 
 Start the Server:
@@ -126,12 +86,14 @@ Start the Server:
 npm run start:server
 
 
+
 Start the Client (in a separate terminal):
 Navigate into the client directory and start the development server.
 
 cd client
 npm run dev
 # The client app should now be running on http://localhost:5173 (or similar)
+
 
 
 ☁️ Deployment
@@ -150,12 +112,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 📞 Contact
 
-Name
-
-GitHub
-
-Himanshu Bawane
-
-@HeMAN45
+You can find the project owner, Himanshu Bawane, on GitHub: @HeMAN45
 
 Happy coding! 🚀
