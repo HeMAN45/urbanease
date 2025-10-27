@@ -1,0 +1,52 @@
+Goal: Generate the complete, self-contained code for the UrbanEase MERN Frontend as a single functional React component file (UrbanEase.jsx). The prototype must incorporate all client-side logic, simulated routing, all new features, and the Gemini API integration.
+
+1. Core Technology & Styling Directives
+File Format: Must be a single, complete, exportable React component file (.jsx).
+
+Dependencies: Use standard React hooks and inline SVG icons (as defined in the previous version).
+
+Styling: Use Tailwind CSS exclusively. Primary color must be Indigo/Blue, with an accent color of Yellow/Orange used specifically for the AI features.
+
+Interactivity: The website must be highly interactive with visible hover states, clear button transitions, and a responsive design that adapts seamlessly to mobile and desktop screens.
+
+2. Localization and Context (CRITICAL)
+Currency: All prices must be displayed using the Indian Rupee symbol (₹).
+
+Names & Data: Use common Indian names for mock professionals and the logged-in user (e.g., Ravi Sharma, Neha Singh).
+
+Categories: The mock service categories must reflect common Indian household needs, including: Electrician/Wiring, Pest/Sanitation, Home Salon/Spa, AC/Appliance Repair, Pooja/Pandit, and Plumbing/Water Tank.
+
+3. State Management and Navigation
+Routing: Simulate navigation between pages (home, favorites, profile, chat, schedule) using a single page state variable.
+
+customerLocation: Must store the user's current service address (e.g., "Dadar, Mumbai, 400028").
+
+bookingDetails: Must store the specific professional object when the user initiates the booking process.
+
+4. Mandatory Features and Components
+A. Header and Location
+Location Management (User Location): A sticky top bar must prominently display the current customerLocation and include a "Change Location" button that navigates to the Profile Page.
+
+B. Service Search Page (home)
+Categories Section: Implement a filter sidebar (or responsive dropdown) to allow users to filter professionals by the specified service categories.
+
+Professional Listings (Multiple): For a single service task, show multiple professionals (around 4-5).
+
+Nearest Professional Location: Each professional card must include a simulated distance from the user's location (e.g., "5 km away, 6 km away").
+
+AI Service Request Generator: Implement the AIServiceGenerator component using the Gemini API utility function, instructed to refine a vague user problem into a structured, formal work request suitable for a professional.
+
+C. Scheduling Page (NEW)
+Booking Flow (Time and Date): Clicking the "Book Now" button on the professional card must open a new SchedulingPage. This page must allow the user to select a simulated date and a time slot before confirming the booking.
+
+D. Messages/Chat Page
+Chat with the Professional: Implement a two-column interface (desktop view) for the chat section, featuring a list of mock conversations and a simulated message window for interacting with a selected professional.
+
+E. Profile Page
+Must include a dedicated form to allow the user to view and update the customerLocation.
+
+5. API Utility Constraint
+The code must include the callGeminiAPI function with an empty API key placeholder (const apiKey = "") and implement exponential backoff for handling retries.
+
+6. Final Output Requirement
+The output must be the complete, single, executable code block for UrbanEase.jsx.
