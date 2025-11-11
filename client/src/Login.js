@@ -1,0 +1,19 @@
+     form {
+       display: flex;
+       flex-direction: column;
+     }
+     input {
+       margin-bottom: 10px;
+       padding: 8px;
+     }
+     button {
+       padding: 10px;
+       background-color: #007bff;
+       color: white;
+       border: none;
+       cursor: pointer;
+     }
+     button:hover {
+       background-color: #0056b3;
+     }
+     
